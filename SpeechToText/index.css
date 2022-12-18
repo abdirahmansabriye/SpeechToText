@@ -1,0 +1,109 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    justify-content: center;
+    background-color: burlywood;
+    text-align: center;
+    color: white;
+}
+
+/** type writer **/
+.intro_1 {
+    animation: intro1;
+  }
+  
+  .intro_2 {
+    animation: intro2;
+  }
+  
+  .intro_1, .intro_2 {
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    position: relative;
+    animation-duration: 15s;
+    color: white;
+    animation-timing-function: steps(25, end);
+    animation-iteration-count: infinite;
+  }
+  
+  .intro_1::after, .intro_2::after {
+    content: "|";
+    position: absolute;
+    right: 0;
+    animation: caret infinite;
+    color: white;
+    animation-duration: 1s;
+    animation-timing-function: steps(1, end);
+  }
+  
+  @keyframes intro1 {
+    0%, 50%, 100% {
+      width: 0;
+    }
+    10%, 40% {
+      width: 17em;
+    }
+  }
+
+  @keyframes intro2 {
+    0%, 50%, 100% {
+      width: 0;
+    }
+    
+    60%, 90% {
+      width: 21.2em;
+    }
+  }
+  
+  
+  
+  @keyframes caret {
+    0%, 100% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+  
+/** buttons **/
+  button {
+    margin: 0;
+    position: absolute;
+    top: 253px;
+	left: 47%;
+    background: transparent;
+    border: none;
+  }
+  #stop-button {
+    margin: 0;
+    position: absolute;
+    top: 245px;
+	  left: 50.5%;
+    font-size: 2em;
+  }
+
+  #text {
+    height: 200px;
+	border: 1px solid white;
+	padding: 10px;
+	box-shadow: 0 0 10px 0 white;
+	margin-bottom: 30px;
+	font-size: 14px;
+	line-height: 25px;
+  }
+
+/** date **/
+
+#date { font-size: auto; color:rgba(white,.2); }
+
+/** footer **/
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: transparent;
+    color: black;
+    text-align: center;
+ }
